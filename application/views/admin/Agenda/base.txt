@@ -1,0 +1,34 @@
+drop table agenda
+CREATE TABLE agenda (
+	--Necesarios para inicializar eventos
+	id serial primary key,
+	title varchar(100) not null,
+	start varchar(25) not null,
+	
+	expediente varchar(100) not null,
+	programado varchar(5) not null,
+  	paciente varchar(50) not null,
+	observaciones text not null,
+	fecha_nac date not null,
+	cama varchar(20) not null,
+  	cdgc varchar(50) not null,
+  	medic_onco varchar(200) not null,
+	medic_onco_noval varchar(200) not null,
+	medic_alter varchar (200) not null,
+	medic_alter_noval varchar (200) not null,
+	pre_medic varchar(100) not null,
+	frec_ciclo varchar(50) not null,
+	medico varchar(50) not null,
+	enfermera varchar(50) not null,
+	fecha date not null,
+	hora varchar(25) not null,
+	estado varchar(25) not null
+);	  
+CREATE TABLE cama(
+	id_cama serial primary key,
+	descripcion varchar(30) not null,
+	tipo int not null
+)
+insert into cama (descripcion,tipo) values('CAMA 1 PISO',0 );
+insert into cama (descripcion,tipo) values('CAMA 2 PISO',0 ) ;
+insert into cama (descripcion,tipo) values('CAMA 1 ALBULATORIA',1 ) 
